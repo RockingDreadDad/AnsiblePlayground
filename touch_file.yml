@@ -1,8 +1,9 @@
 ---
-- name: Touch file Sample
-  hosts: all
+- hosts: all
+
   tasks:
-     file:
-     path: /etc/foo.conf
-     state: touch
-     mode: u=rw,g=r,o=r
+    - name: Touch file
+      file:
+        path: /etc/foo.conf
+        state: touch
+        mode: u=rw,g=r,o=r
